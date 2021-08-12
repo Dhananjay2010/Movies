@@ -1,0 +1,64 @@
+To install: 
+
+    npm i react-router-dom
+
+Based on links(url) the component changes which feels like a new page is loaded.
+ { jaise he link(url) change kiya, nya component aaya screen pe, jiske karan aisa laga ki nya page aaya.}
+
+ This package provides us with few react component which provies functionality on the UI. 
+
+        ==> Router  Route   Switch   Link
+
+
+
+ Note : We want that with different addresses of url , different component should be displayed in the screen
+ 
+       That is the only reason the Switch was inplemented for various cases.
+
+        ===> We have imported BrowserRouter as Router 
+        
+
+<Route> ===> It has an attribut named path which has the URL path.
+
+              So ye kehta hai ki agar mera path ye hai to mere andar wala component 
+              dikhaya jaya.
+
+              That's is the only reason we have implemente various routes for our different URL.
+
+<Link> ==> It is same as anchor tag(<a>).
+
+<a> ko <Link> tag mai convert karne se page reload nhi hua.
+
+In <Link>, the href is <a> is replaced by to.
+
+
+
+=========================================================================================================================
+
+<Route> in itself is like an individual if statement. Agar mera path match hua, to mai component display kar dunga.
+
+To agar bahut sare <Route> hote, to multiple if true ho sakte hain ek sath.(/) (/customers) (/rentals) (/login) path
+
+ke agar char Route hain
+       ( Kyunki path ki partial matching hoti hai. 
+
+              To agar url mai hai http://localhost:3000/customers
+
+              To (/) wala path bhi  true
+              aur (/customers) wala path bhi true.
+              
+              To Ye dono display honge.
+       )
+
+So isiliye "Switch"  use kiya taki agar ek bhi true ho, to baki ke route ko check na kare.
+
+Note: This is the reason path(/) is at the bottom. 
+       ( Kyunki agar upr hua to pehle he true ho jaega aur wahi display hota rahega )
+
+
+
+========================================================================================================
+
+
+                                          
+       

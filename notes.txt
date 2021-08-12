@@ -1,0 +1,79 @@
+npm install akrne se jo bhi dependencies hoti hain 
+package.json mai wo package nhi hai to wo download ho jati hain.
+
+package.json==> Ye wo hain jo libraries humara app use karte hai basically.
+
+
+package_lock.json==> Ye wo jispe humari libraries depend karti hain
+
+.gitignore==> Wo files jo git ignore karti hai jab upload hota hai git mai.
+
+============================================================================================
+
+
+How to import and export the component?
+
+export default conponent_name====> Pehle export kar tabhi to import kar payega.
+
+import component_name from file_address====> Agar export kar diya hai to import karle kisi
+                                             aur component mai
+
+========================================================
+
+CONDITIONAL RENDERING===>
+
+
+        Using a props as a condition and condition le hisab se 
+        alag alag components render karao. It is like a simple if else 
+        statement. Matlab agar ek condition true to A conponent ko render karao
+        aur agar false to B component ko render karao.
+
+        For ex:==> We have a component called Test1 and Test2.
+        Also we have a component named App.
+
+          
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+ReactDOM.render(
+    <App logged={true}/>,
+  document.getElementById('root')
+); 
+
+        function App(props) {
+  return (
+    <div>
+      {(props.logged)?<h1>Simple html </h1>:<Test2/>}
+      {(props.logged)?<Test1/>:<Test2/>}
+
+    </div>
+  );
+}
+
+        So what is happening is depending upon the value of 
+        logged prop, which is given by the parent of App, the 
+        App component will render component based on the value of the
+        logged.
+
+        {(props.logged)?<Test1/>:<Test2/>}
+
+        So for this, if props.logged is true, then Test1 component will render
+        and if it is false,  then Test2 will render.
+
+Ex 2 : ==>   {(props.logged)?<h1>Simple html </h1>:<Test2/>}
+
+        Same goes will this statement.If props.logged value is true,then Simple Html h1 tag will render and if 
+        false thenn Test2 will render. Thus called conditional rendering.
+
+
+<==============================================================================>
+
+
+
+
+
+        
+
+
+
