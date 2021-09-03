@@ -35,7 +35,7 @@ server.get("/genre", function (req, res) {
 });
 
 
-server.listen(4000);
+server.listen(process.env.PORT || 4000);
 
 /*
 server.listen(4000);
